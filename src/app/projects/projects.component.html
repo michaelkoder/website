@@ -1,17 +1,40 @@
 <main role="main">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="">33</div>
-        </div>
-        <div class="col">
-          <h1 class="text-align:center">
-            PROJECTS
-          </h1>
-        </div>
-        <div class="col">
-          <div class="">33</div>
-        </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-1">
+      </div>
+      <div class="col-10 text-center mt-4 mb-4">
+        <h1>PROJETS</h1>
+        <h4>Voici quelques projets réalisés ces dernières années regroupés par types </h4>
+      </div>
+      <div class="col-1">
       </div>
     </div>
-  </main>
+
+    <div class="row">
+      <div class="col-1">
+      </div>
+      <div class="col-10">
+
+        <div *ngFor="let projectGroup of projectList">
+          <h5>{{projectGroup.title}}</h5>
+          <div class="row row-cols-1 row-cols-md-4 mt-3">
+            <div *ngFor="let project of projectGroup.projects" class="col mb-4">
+              <a href="{{project.url}}" target="_BLANK" class="card h-100">
+                <img src="assets/images/projects/{{project.logo}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{project.name}}</h5>
+                  <p class="card-text">{{project.description}}</p>
+                </div>
+              </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="col-1">
+    </div>
+  </div>
+  </div>
+</main>

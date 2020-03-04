@@ -1,3 +1,11 @@
 .iconsBox img {
     width:50px;
 }
+
+main section#homeBox1 {
+    background: url('../../assets/images/DigikoderBG.jpg');
+    box-shadow: inset 0 0 0 1000px rgba(242, 242, 242, 0.8);
+    background-repeat: repeat;
+    background-size: 90%;
+    background-position: center;
+}

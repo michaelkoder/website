@@ -1,0 +1,27 @@
+<main>
+    <section class="container">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <div id="carouselExampleControls" class="carousel slide vh-50" data-ride="carousel">
+                    <div class="carousel-inner">
+
+                    <div *ngFor="let slide of sliders[2].slides;let i=index" [ngClass]="{'active' :i==0}" class="carousel-item">
+                        <img src="assets/images/graphisme/Conception/{{slide.url}}" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </section>
+</main>
