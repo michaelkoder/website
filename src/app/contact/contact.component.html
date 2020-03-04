@@ -1,1 +1,115 @@
-<p>contact works!</p>
+<main>
+
+    <h1 class="text-center mt-5 mb-5"> FORMULAIRE DE CONTACT </h1>
+
+    <!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+    <h1>
+      Welcome to {{title}}!!
+    </h1>
+    <form [formGroup]="angForm2" novalidate>
+          <div class="form-group">
+            <label class="center-block">Name:
+              <input class="form-control" formControlName="name">
+            </label>
+            <label class="center-block">firstName:
+              <input class="form-control" formControlName="firstName">
+            </label>
+          </div>
+          <div *ngIf="angForm2.controls['name'].invalid && (angForm2.controls['name'].dirty || angForm2.controls['name'].touched)" class="alert alert-danger">
+              <div *ngIf="angForm2.controls['name'].errors.required">
+              Name is required.
+            </div>
+          </div>
+    </form>
+  <p>Form value: {{ angForm2.value | json }}</p>
+  <p>Form status: {{ angForm2.status | json }}</p>
+  </div>
+  
+  
+  <form [formGroup]="angForm" (ngSubmit)="sendContact()" class="container mt-4">
+        <div class="row m-4">
+            <div class="col-3"></div>
+            <div class="col-3 text-right">
+                <label>
+                    First Name:
+                </label></div>
+            <div class="col-3">
+                <input type="text" id="firstName" name="firstName" class="form-control" required minlength="4" formControlName="firstName">
+                
+                <div *ngIf="angForm.controls['firstName'].invalid && (angForm.controls['firstName'].dirty || angForm.controls['firstName'].touched)" class="alert alert-danger">
+                    <div *ngIf="angForm.controls['firstName'].errors.required">
+                    Name is required.
+                </div>
+                </div>
+                <!--
+                    <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="alert alert-danger">
+
+                    <div *ngIf="firstName.errors.required"> Le nom est obligatoire </div>
+                    <div *ngIf="firstName.errors.minlength">
+                    Le nom doit compter au moins 4 caractères
+                    </div>
+                </div>
+            -->
+
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row m-4">
+            <div class="col-3"></div>
+            <div class="col-3 text-right">
+                <label>
+                    Last Name:
+                </label></div>
+            <div class="col-3">
+                <input type="text" id="firstName" name="firstName" class="form-control" required minlength="4" formControlName="firstName">
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row m-4">
+            <div class="col-3"></div>
+            <div class="col-3 text-right"><label>
+                    Email:
+                </label></div>
+            <div class="col-3"> 
+                <input type="email" id="email" name="email" class="form-control" required formControlName="email">
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row m-4">
+            <div class="col-3"></div>
+            <div class="col-3 text-right">
+                <label>
+                    Titre du message:
+                </label>
+            </div>
+            <div class="col-3">
+                
+                <input type="text" id="titreMessage" name="titreMessage" class="form-control" required formControlName="firstName">
+
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row m-4">
+            <div class="col-3"></div>
+            <div class="col-2 text-right">
+                <label>Message: </label>
+            </div>
+            <div class="col-4">
+                <textarea class="w-100" formControlName="contactMessage" id="contactMessage" name="contactMessage" class="form-control" required ></textarea>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row m-4">
+            <div class="col-4"></div>
+            <div class="col-4 text-center">
+                <button type="submit" [disabled]="!profileForm.valid">Envoyer</button>
+            </div>
+            <div class="col-4"></div>
+        </div>
+
+    </form>
+    <p>Form2 value: {{ angForm.value | json }}</p>
+    <p>Form2 status: {{ angForm.status | json }}</p>
+
+</main>

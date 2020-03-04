@@ -3,6 +3,10 @@ header .container .navbar-nav .nav-item a{
     margin:0 1.2rem;
 } 
 
+.headerTop a{
+    font-size: 14px;;
+
+}
 
 header{
     box-shadow: 0 3px 6px 0 rgba(0,0,0,.16);

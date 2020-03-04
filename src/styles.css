@@ -2,3 +2,44 @@
 @media screen {
     @import '../node_modules/bootstrap/scss/bootstrap';
   }
+
+
+  .koderSlider img{
+    height: 80vh;
+  }
+  #graphismeCarrousel{
+    min-height:400px;
+  }
+  #graphismeCarrousel.koderSlider .carousel-inner img{
+   
+    padding: 50px;
+  }
+  .koderSlider a:hover,
+  .koderSlider a{
+   color:#000;
+   cursor: pointer;
+  }
+
+  
+  .koderSlider a:hover svg path,
+  .koderSlider a svg path{
+   fill:#000;
+  }
+
+  .customSlider .customSliderBox img{
+    margin: 0 auto;
+    display: none;
+  }
+
+
+  .customSlider .customSliderCtrl{
+    cursor: pointer;
+  }
+  .customSlider .customSliderBox img.active{
+    display:block;
+  }
+  .customSlider{
+    min-height: 600px;
+  }
+
+  

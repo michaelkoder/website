@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-
+import { FormsModule }   from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AngularSvgIconModule } from 'angular-svg-icon';
@@ -14,6 +14,8 @@ import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 import { ConceptionComponent } from './conception/conception.component';
 import { GraphismeComponent } from './graphisme/graphisme.component';
 import { ContactComponent } from './contact/contact.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ContactComponent } from './contact/contact.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
+    FontAwesomeModule,
+    HttpClientModule,FormsModule,
+    ReactiveFormsModule,
     NgxExtendedPdfViewerModule,
     AngularSvgIconModule.forRoot()
   ],
