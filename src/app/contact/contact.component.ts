@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { ConnectionService } from '../connection.service';
+import { Component, OnInit} from '@angular/core';
+import { AppService,IMessage } from '../connection.service';
 import { FormGroup, FormControl,  FormBuilder,  Validators } from '@angular/forms';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -9,40 +10,37 @@ import { FormGroup, FormControl,  FormBuilder,  Validators } from '@angular/form
 })
 export class ContactComponent implements OnInit {
 
+  url: string = 'http://digikoder.com/contact';
+  message: IMessage = {};
 
-  profileForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    mail: new FormControl(''),
-    title: new FormControl(''),
-    message: new FormControl('')
-  });
-    ngOnInit(): void {
+  ngOnInit(): void {
+
   }
-  sendContact(){
-    console.log(this.profileForm);
+  
+  //https://www.truecodex.com/course/angular-project-training/create-contact-form-and-send-data-on-email-angular
+ 
+  envoiMail(message: IMessage) {
+    this.appService.sendEmail(message).subscribe(res => {
+      console.log('AppComponent Success', res);
+    }, error => {
+      console.log('AppComponent Error', error);
+    });
   }
 
-  title = 'Angular Form Validation Tutorial';
    angForm: FormGroup;
-   angForm2: FormGroup;
-   constructor(private fb: FormBuilder) {
+   constructor(private fb: FormBuilder,
+    private appService: AppService
+    ) {
     this.createForm();
-    this.createForm2();
   }
   createForm() {
    this.angForm = this.fb.group({
      name: ['', Validators.required ],
      firstName: ['', Validators.required ],
-     titreMessage: ['', Validators.required ],
+     phone: ['', Validators.required ],
      email: ['', Validators.required ],
+     titreMessage: ['', Validators.required ],
      contactMessage: ['', Validators.required ]
    }); 
  }
- createForm2() {
-  this.angForm2 = this.fb.group({
-    name: ['', Validators.required ],
-    firstName: ['', Validators.required ]
-  }); 
-}
 }
