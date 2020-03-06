@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
-import { Resolve } from '@angular/router';
+import { HttpClient,HttpHeaders  } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
@@ -10,20 +9,40 @@ import 'rxjs/add/observable/throw';
 
 
 export interface IMessage {
-  name?: string;
-  email?: string;
-  message?: string;
+  name: string;
+  firstName: string;
+  phone: string;
+  email: string;
+  title: string;
+  message: string;
 }
+
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type':  'application/json',
+    'Authorization': 'my-auth-token'
+  })
+};
 
 @Injectable()
 export class AppService {
   private emailUrl = '../app/get-in-touch/email.php';
 
-  constructor(private http: Http) {
+  constructor(private http: HttpClient) {
 
   }
 
   sendEmail(message: IMessage): Observable<IMessage> | any {
+    return this.http.post(this.emailUrl, message, httpOptions)
+    .subscribe(response => {
+      console.log('Sending email was successfull', response);
+      return response;
+    })
+  }
+
+  /*
+  sendEmail2(message: IMessage): Observable<IMessage> | any {
     return this.http.post(this.emailUrl, message)
       .map(response => {
         console.log('Sending email was successfull', response);
@@ -34,4 +53,7 @@ export class AppService {
         return Observable.throw(error);
       });
   }
+  */
+
+
 }

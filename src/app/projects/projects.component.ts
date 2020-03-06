@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import * as $ from "jquery";
 
 @Component({
   selector: 'app-projects',
@@ -7,7 +9,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor() { }
+  constructor(       
+     private activatedRoute: ActivatedRoute
+    ) {
+      this.getRouteParams();
+     }
+  
+  // Dynamic parameters for this component's route: /example-params/:first/:second
+  routeParams: Params;
+
+  // Query parameters found in the URL: /example-params/one/two?query1=one&query2=two
+  queryParams: Params;
+
+
+
+  // Store parameter values on URL changes
+  getRouteParams() {
+
+      // Route parameters
+      this.activatedRoute.params.subscribe( params => {
+          this.routeParams = params;
+      });
+  }
+
+  popinTitle="projet";
+  popinContent="projetContent";
+  popinSrc="popinSrc";
+
+
+  openModal(newTitle, newContent, newSrc){
+    
+    this.popinTitle=newTitle;
+    this.popinContent=newContent;
+    this.popinSrc=newSrc;
+   console.log('openModal');
+  }
 
   projectList:Object=[
     { id:'perso',title:"Projets Personnels",projects:[
@@ -33,10 +69,10 @@ export class ProjectsComponent implements OnInit {
  ];
 
   ngOnInit(): void {
+    let getParam  =this.routeParams.first;
+    if($.isNumeric(getParam)){
+      console.log('OPEN PROJET >'+getParam);
+      setTimeout(function(){$('#project'+getParam).click();},2000);
+    }
   }
-
-  loadProjects(){
-    console.log('loadProjects');
-  }
-
 }

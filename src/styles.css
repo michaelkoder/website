@@ -3,7 +3,9 @@
     @import '../node_modules/bootstrap/scss/bootstrap';
   }
 
-
+  .cursor-pointer{
+    cursor: pointer;
+  }
   .koderSlider img{
     height: 80vh;
   }

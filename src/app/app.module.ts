@@ -16,6 +16,7 @@ import { GraphismeComponent } from './graphisme/graphisme.component';
 import { ContactComponent } from './contact/contact.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MyModalComponent } from './my-modal/my-modal.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     PageNotFoundComponent,
     ConceptionComponent,
     GraphismeComponent,
-    ContactComponent
+    ContactComponent,
+    MyModalComponent
   ],
   imports: [
     BrowserModule,

@@ -6,12 +6,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  styleUrls: ['./contact.component.css'],
+  providers: [AppService]
 })
 export class ContactComponent implements OnInit {
 
   url: string = 'http://digikoder.com/contact';
-  message: IMessage = {};
+  message: IMessage;
 
   ngOnInit(): void {
 
@@ -19,8 +20,9 @@ export class ContactComponent implements OnInit {
   
   //https://www.truecodex.com/course/angular-project-training/create-contact-form-and-send-data-on-email-angular
  
-  envoiMail(message: IMessage) {
-    this.appService.sendEmail(message).subscribe(res => {
+  envoiMail() {
+    this.message = this.angForm.value;
+    this.appService.sendEmail(this.message).subscribe(res => {
       console.log('AppComponent Success', res);
     }, error => {
       console.log('AppComponent Error', error);

@@ -58,7 +58,7 @@
         projets à l'aide des outils wordpress et woocommerce pour réaliser tous types de sites web pour des particuliers
         ou des entreprises.
         <div class="mt-5 mb-5">
-          <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bd-example-modal-lg">
+          <button type="button"  class="btn btn-success" data-toggle="modal" data-target=".bd-example-modal-lg">
             CONSULTER MON CV
           </button>
         </div>
@@ -90,7 +90,7 @@
 
   <section class="container ">
 
-    <div class="row mt-5">
+    <div class="row mt-5 mb-5">
       <div class="col-1"></div>
       <div class="col-10">
         <h2 class="text-center">PROJET PROFESSIONNEL</h2>
@@ -98,40 +98,43 @@
         <p>
           <b>
             <h4>Recherche :</h4>
-          </b> mission freelance ou CDI dans le développement ou l'intégration web front. 
+          </b> mission freelance ou CDI dans le développement ou l'intégration web front.
           <br>Travailler en équipe et monter
           en compétence sur les nouvelles technologies front comme Angular, ReactJS, Javascript ES6, VueJs par
           exemple.<br> J'ai également également intervenir sur de la conception UI/UX, de la conduite de projets,
           montage vidéo ou graphiques photoshop et sur les outils wordpress/woocommerce si necessaire.
         </p>
 
-        <div class="row mt-5">
-          <div class="col-4 d-inline-flex">
+        <div class="row mt-5 ">
+          <div class="col-4 d-inline-flex ">
             <b>
               <h4>Mobilité : </h4>
             </b>&nbsp;<p class="pt-1">Ile de France / France.</p>
           </div>
-
           <div class="col-4 d-inline-flex">
             <b>
               <h4>Disponibilitée : </h4>
             </b>&nbsp;<p class="pt-1">Immédiate.</p>
           </div>
+          <div class="col-4"></div>
 
-          <div class="col-4 d-inline-flex">
-            <p>
-              <b>
-                <h4>Tarifs : </h4>
-              </b>
-              <b>JTM Freelance : </b><br>
-              Ile de France : 400-500 €.<br>
-              Hors ile de France : 350-450 €.<br>
-              <b>CDI</b> : 50K et +
-            </p>
-          </div>
         </div>
 
-
+        <div class="row mt-4 ">
+          <div class="col-3 text-right ">
+            <b>
+              <h4 class="pr-3">Tarifs : </h4>
+              </b>
+          </div>
+          <div class="col-5 d-inline-flex text-left">
+            <b>JTM Freelance <span class="mr-1">:</span> </b>
+            Ile de France : 400-500 €.<br>
+            Hors ile de France : 350-450 €.<br>
+          </div>
+          <div class="col-4">
+            <b>CDI <span class="mr-1 ml-1">:</span></b> 50K et +
+          </div>
+        </div>
 
       </div>
       <div class="col-1"></div>
@@ -141,21 +144,4 @@
 
 
 </main>
-
-<!-- Modal -->
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">CV Claude Michael Développeur Intégateur web Front</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <ngx-extended-pdf-viewer [src]="'assets/images/CLAUDE_MICHAEL_CV_2020_6.pdf'" useBrowserLocale="true"
-        height="110vh" width="100%"></ngx-extended-pdf-viewer>
-
-    </div>
-  </div>
-</div>
+<app-my-modal title="CV Claude Michael Développeur Intégateur web Front " content="moncv"></app-my-modal>
