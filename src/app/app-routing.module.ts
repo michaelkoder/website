@@ -10,7 +10,8 @@ import { GraphismeComponent } from './graphisme/graphisme.component';
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
-  {path:'projects/:first',component:ProjectsComponent,data :{ first:'1'}},
+  {path:'projects/:first',component:ProjectsComponent},
+  {path:'projects',component:ProjectsComponent},
   {path:'graphisme',component:GraphismeComponent},
   {path:'conception',component:ConceptionComponent},
   {path:'contact',component:ContactComponent},

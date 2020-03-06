@@ -1,7 +1,7 @@
 <!-- Modal -->
 <div id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
   aria-hidden="true">
-  <div [ngClass]="'modal-lg'? content=='moncv':'' " class="modal-dialog " role="document">
+  <div [ngClass]="{'modal-lg': content=='moncv'}" class="modal-dialog " role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">{{title}}</h5>

@@ -9,40 +9,33 @@ import * as $ from "jquery";
 })
 export class ProjectsComponent implements OnInit {
 
+
+  popinTitle="projet";
+  popinContent="projetContent";
+  popinSrc="popinSrc";
+  
   constructor(       
      private activatedRoute: ActivatedRoute
     ) {
       this.getRouteParams();
      }
-  
   // Dynamic parameters for this component's route: /example-params/:first/:second
   routeParams: Params;
 
-  // Query parameters found in the URL: /example-params/one/two?query1=one&query2=two
-  queryParams: Params;
-
-
-
   // Store parameter values on URL changes
   getRouteParams() {
-
       // Route parameters
       this.activatedRoute.params.subscribe( params => {
           this.routeParams = params;
       });
   }
 
-  popinTitle="projet";
-  popinContent="projetContent";
-  popinSrc="popinSrc";
 
-
-  openModal(newTitle, newContent, newSrc){
-    
+  openModal(newTitle:'title', newContent:'content', newSrc:'img'){
     this.popinTitle=newTitle;
     this.popinContent=newContent;
     this.popinSrc=newSrc;
-   console.log('openModal');
+    console.log('openModal');
   }
 
   projectList:Object=[
@@ -69,8 +62,10 @@ export class ProjectsComponent implements OnInit {
  ];
 
   ngOnInit(): void {
+
     let getParam  =this.routeParams.first;
-    if($.isNumeric(getParam)){
+
+    if(getParam && $.isNumeric(getParam)){
       console.log('OPEN PROJET >'+getParam);
       setTimeout(function(){$('#project'+getParam).click();},2000);
     }

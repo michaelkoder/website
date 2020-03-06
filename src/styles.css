@@ -44,4 +44,15 @@
     min-height: 600px;
   }
 
-  
+  @media (max-width: 768px) { 
+    #contactForm .text-right{
+      text-align:left !important;
+    }
+  }
+
+  @media (max-width: 576px) { 
+    .koderSlider img{
+      height: initial;
+      width:100%;
+    }
+  }

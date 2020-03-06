@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-1">
-      </div>
+      </div> 
       <div class="col-10 text-center mt-4 mb-4">
         <h1>PROJETS</h1>
         <h4>Voici quelques projets réalisés ces dernières années regroupés par types </h4>
@@ -18,13 +18,11 @@
 
         <div *ngFor="let projectGroup of projectList; let z =index">
           <h5>{{projectGroup.title}}</h5>
-          <div class="row row-cols-1 row-cols-md-4 mt-3">
-
-
+          <div class="row row-cols-1 row-cols-md-3 mt-3">
             <div *ngFor="let project of projectGroup.projects;let i =index" class="col mb-4">
               <div class="card h-100">
                   <a routerLink="/projects/{{z}}{{i}}" > 
-                    <div id="project{{z}}{{i}}" class="text-right mt-n3 mr-n3 cursor-pointer" data-toggle="modal" (click)="openModal(project.name, project.description, project.logo)" data-target=".bd-example-modal-lg">
+                    <div id="project{{z}}{{i}}" class="text-right mt-n3 mr-n3 cursor-pointer" data-toggle="modal" data-target=".bd-example-modal-lg"  (click)="openModal(project.name, project.description, project.logo)" >
                       <i class="fas fa-info-circle fa-2x"></i>
                     </div>
                   </a>

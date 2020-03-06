@@ -1,14 +1,14 @@
 <main>
     <h1 class="text-center mt-5 mb-5"> FORMULAIRE DE CONTACT </h1>
     <div style="text-align:center">
-        <form [formGroup]="angForm" (ngSubmit)="envoiMail()" class="container mt-4">
+        <form id="contactForm" [formGroup]="angForm" (ngSubmit)="envoiMail()" class="container mt-4">
             <div class="row m-4">
-                <div class="col-2"></div>
-                <div class="col-3 text-right">
+                <div class="col-12 col-md-2"></div>
+                <div class="col-12 col-md-3 text-right">
                     <label>
                         Nom :
                     </label></div>
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <input type="text" id="name" name="name" class="form-control" required minlength="4"
                         formControlName="name">
                     <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)"
@@ -18,15 +18,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3"></div>
+                <div class="col-12 col-md-3"></div>
             </div>
             <div class="row m-4">
-                <div class="col-2"></div>
-                <div class="col-3 text-right">
+                <div class="col-12 col-md-2"></div>
+                <div class="col-12 col-md-3 text-right">
                     <label>
                        Prénom :
                     </label></div>
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <input type="text" id="firstName" name="firstName" class="form-control" required minlength="4"
                         formControlName="firstName">
                     <div *ngIf="angForm.controls['firstName'].invalid && (angForm.controls['firstName'].dirty || angForm.controls['firstName'].touched)"
@@ -36,13 +36,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3"></div>
+                <div class="col-12 col-md-3"></div>
             </div><div class="row m-4">
-                <div class="col-2"></div>
-                <div class="col-3 text-right"><label>
+                <div class="col-12 col-md-2"></div>
+                <div class="col-12 col-md-3 text-right"><label>
                         Téléphone :
                     </label></div>
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <input type="phone" id="phone" name="phone" class="form-control" required formControlName="phone" />
                     <div *ngIf="angForm.controls['phone'].invalid && (angForm.controls['phone'].dirty || angForm.controls['phone'].touched)"
                         class="alert alert-danger">
@@ -51,14 +51,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3"></div>
+                <div class="col-12 col-md-3"></div>
             </div>
             <div class="row m-4">
-                <div class="col-2"></div>
-                <div class="col-3 text-right"><label>
+                <div class="col-12 col-md-2"></div>
+                <div class="col-12 col-md-3 text-right"><label>
                         Email :
                     </label></div>
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <input type="email" id="email" name="email" class="form-control" required formControlName="email" />
                     <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['email'].dirty || angForm.controls['email'].touched)"
                         class="alert alert-danger">
@@ -67,16 +67,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3"></div>
+                <div class="col-12 col-md-3"></div>
             </div>
             <div class="row m-4">
-                <div class="col-2"></div>
-                <div class="col-3 text-right">
+                <div class="col-12 col-md-2"></div>
+                <div class="col-12 col-md-3 text-right">
                     <label>
                         Titre du message :
                     </label>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <input type="text" id="titreMessage" name="titreMessage" class="form-control" required
                         formControlName="titreMessage">
                     <div *ngIf="angForm.controls['titreMessage'].invalid && (angForm.controls['titreMessage'].dirty || angForm.controls['titreMessage'].touched)"
@@ -86,14 +86,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3"></div>
+                <div class="col-12 col-md-3"></div>
             </div>
             <div class="row m-4">
-                <div class="col-2"></div>
-                <div class="col-3 text-right">
+                <div class="col-12 col-md-2"></div>
+                <div class="col-12 col-md-3 text-right">
                     <label>Message : </label>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <textarea class="w-100" formControlName="contactMessage" id="contactMessage" name="contactMessage"
                         class="form-control" formControlName="contactMessage" required></textarea>
                     <div *ngIf="angForm.controls['contactMessage'].invalid && (angForm.controls['contactMessage'].dirty || angForm.controls['contactMessage'].touched)"
@@ -103,16 +103,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3"></div>
+                <div class="col-12 col-md-3"></div>
             </div>
             <div class="row m-4">
-                <div class="col-4"></div>
-                <div class="col-4 text-center">
+                <div class="col-12 col-md-4"></div>
+                <div class="col-12 col-md-4 text-center">
                     <button type="submit" [disabled]="angForm.pristine || angForm.invalid" class="btn btn-success">
                         Envoyer
                     </button>
                 </div>
-                <div class="col-4"></div>
+                <div class="col-12 col-md-4"></div>
             </div>
         </form>
         <p>Form2 value: {{ angForm.value | json }}</p>
