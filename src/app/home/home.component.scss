@@ -1,0 +1,132 @@
+@import '../../styles.scss';
+
+$fbColor:#4080ff;
+$fbColor2:#4054b2;
+
+.iconsBox img {
+    width: 50px;
+}
+
+#homeBox1 {
+    min-height: 700px;
+}
+main{
+    background: url('../../assets/images/DigikoderBG.jpg');
+    box-shadow: inset 0 0 0 1000px rgba(39, 39, 39, 0.58);
+    background-repeat: repeat;
+    background-size: 90%;
+    background-attachment:fixed;
+    background-position: center;
+    
+    section#homeBox1{
+        color: #FFFFFF;
+    }
+    section#projetPro{
+        background-color: rgba(242, 242, 242, 0.8);
+        padding: 10px 0 20px;
+    }
+}
+ 
+
+
+.facebook-review-box {
+    display: flex;
+
+    .fb-imgBox img {
+        width: 80px;
+    }    
+    .fb-box2{
+        background-color:  $myWhite;
+        border-radius: 15px;
+        font-size: 14px;
+        padding: 30px;
+    }
+    .fb-imgBox {
+        border-radius: 90px;
+        overflow: hidden;
+        display: inline-flex;
+    }
+    h4 {
+        color:$fbColor;
+        font-size: 14px;
+    }
+}
+
+.facebookBtn{
+    background-color: $fbColor2;
+    color: #FFFFFF;
+    padding:15px 30px;
+    border-radius: 3px;
+    &:hover{
+        color:#FFFFFF;
+    }
+}
+.shareBox .list-inline-item{
+
+    background: #ffffffe0;
+    border-radius: 8px;
+}
+.technosBox{
+    background: rgba(0, 0, 0, 0.55);
+    height: 200px;
+    padding: 20px;
+    border-radius: 20px;
+
+    svg{
+        color:#000000;
+    }
+    .icon-background{color:#ffffff;}
+    .fa-react {color:#61daf9;}
+    .fa-vuejs{color:#53ba87;}
+    .fa-angular{color:#e23537;}
+
+    .currentTech{
+        svg{
+           font-size: 10em;
+        }
+    }
+    .nextTech{
+        svg{
+            font-size: 2.6em;
+        }
+    }
+    .nextTechBox{
+        top: 80px;
+        &:first-child{
+            text-align:right;
+        }
+        &:last-child{
+            text-align:left;
+        }
+    }
+}
+.whiteTxt{
+    color:#ffffff;
+}
+
+.blackTxt{
+    color:#000000;
+}
+.facebook-review-box {
+    .fb-stars {
+        color: $fbColor;
+    }
+}
+@media (max-width: 768px) { 
+    .technosBox{
+        .currentTech{
+            svg{
+                font-size: 7em;
+                }
+            }
+        }
+  }
+
+  @media (max-width: 420px) { 
+    main  section#projetPro .row.m-5{
+        margin: 1rem !important;
+    }
+    .technosBox.w-50{
+        width: 100% !important;
+     }
+  }

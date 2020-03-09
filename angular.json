@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "michaelKoder": {
@@ -23,15 +23,15 @@
               "src/favicon.ico",
               "src/assets",
               {
-                "glob": "pdf.worker.js", 
+                "glob": "pdf.worker.js",
                 "input": "node_modules/ngx-extended-pdf-viewer/assets",
                 "output": "/assets/"
               }
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/@fortawesome/fontawesome-free/css/all.css",
-              "src/styles.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.scss",
+              "node_modules/@fortawesome/fontawesome-free/css/all.scss",
+              "src/styles.scss"
             ],
             "scripts": [
               "node_modules/ngx-extended-pdf-viewer/assets/pdf.js",
@@ -102,7 +102,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -133,6 +133,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "michaelKoder"
+    }
+  },
+  "defaultProject": "michaelKoder",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

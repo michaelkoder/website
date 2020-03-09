@@ -4,7 +4,7 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-graphisme',
   templateUrl: './graphisme.component.html',
-  styleUrls: ['./graphisme.component.css']
+  styleUrls: ['./graphisme.component.scss']
 })
 export class GraphismeComponent implements OnInit {
   faCoffee = faCoffee;

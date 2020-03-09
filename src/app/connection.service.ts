@@ -27,7 +27,7 @@ const httpOptions = {
 
 @Injectable()
 export class AppService {
-  private emailUrl = '../app/get-in-touch/email.php';
+  private emailUrl = 'https://digikoder.com/email.php';
 
   constructor(private http: HttpClient) {
 

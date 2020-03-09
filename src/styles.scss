@@ -1,0 +1,81 @@
+/* You can add global styles to this file, and also import other style files */
+@media screen {
+    @import '../node_modules/bootstrap/scss/bootstrap';
+  }
+
+  $myWhite:#f8f8f8;
+
+  body{
+    background-color: $myWhite;
+  }
+  .cursor-pointer{
+    cursor: pointer;
+  }
+  
+
+  #graphismeCarrousel{
+    min-height:400px;
+  }
+  #graphismeCarrousel.koderSlider .carousel-inner img{
+   
+    padding: 50px;
+  }
+
+  .koderSlider {
+    a:hover svg path,
+    a svg path{
+    fill:#000;
+    }
+    a:hover,
+    a{
+    color:#000;
+    cursor: pointer;
+    }
+    img{
+      height: 80vh;
+    }
+  }
+
+  .customSlider{
+    min-height: 600px;
+    .customSliderCtrl{
+      cursor: pointer;
+    }
+    .customSliderBox 
+    img{
+      margin: 0 auto;
+      display: none;
+      &.active{
+        display:block;
+      }
+    }
+  }
+
+  @media (max-width: 768px) { 
+    #contactForm .text-right{
+      text-align:left !important;
+    }
+  }
+
+  @media (max-width: 576px) { 
+    .koderSlider img{
+      height: initial;
+      width:100%;
+    }
+  }
+
+@media (max-width: 420px) { 
+  body header nav.navbar.navbar-expand-lg button.navbar-toggler{
+      display: contents;
+  }
+  body header nav.navbar.navbar-expand-lg .navbar-brand{
+      margin: 0px !important;
+  }
+}
+
+  @media (max-width: 330px) { 
+
+    body{
+        display: flex;
+     }
+  }

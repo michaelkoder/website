@@ -7,9 +7,4 @@ export class AppServiceService {
 
   constructor() { 
   }
-  modalContent="empty Modal";
-
-  updateModalContent(){
-    this.modalContent = 'messageZZZ';
-  }
 }

@@ -4,7 +4,7 @@
       <div class="col-1">
       </div> 
       <div class="col-10 text-center mt-4 mb-4">
-        <h1>PROJETS</h1>
+        <h1 class="mb-4 mt-2">PROJETS</h1>
         <h4>Voici quelques projets réalisés ces dernières années regroupés par types </h4>
       </div>
       <div class="col-1">
@@ -21,11 +21,10 @@
           <div class="row row-cols-1 row-cols-md-3 mt-3">
             <div *ngFor="let project of projectGroup.projects;let i =index" class="col mb-4">
               <div class="card h-100">
-                  <a routerLink="/projects/{{z}}{{i}}" > 
-                    <div id="project{{z}}{{i}}" class="text-right mt-n3 mr-n3 cursor-pointer" data-toggle="modal" data-target=".bd-example-modal-lg"  (click)="openModal(project.name, project.description, project.logo)" >
+                
+                    <div id="project{{z}}{{i}}" class="text-right mt-n3 mr-n3 cursor-pointer" data-toggle="modal" data-target=".bd-example-modal-lg"  (click)="openModal(project.name, project.description, project.logo,project.url)" >
                       <i class="fas fa-info-circle fa-2x"></i>
                     </div>
-                  </a>
                   <a href="{{project.url}}" target="_BLANK"> 
                     <img src="assets/images/projects/{{project.logo}}" class="card-img-top" alt="{{project.name}}">
                     <div class="card-body">
@@ -49,4 +48,4 @@
   </div>
   </div>
 </main>
-<app-my-modal title="{{popinTitle}}" content="{{popinContent}}" imgSrc="{{popinSrc}}"></app-my-modal>
+<app-my-modal title="{{popinTitle}}" content="{{popinContent}}" imgSrc="{{popinSrc}}" popinLink="{{popinLink}}"></app-my-modal>

@@ -1,29 +1,14 @@
 <header>
-
-  <div class="container-fluid bg-dark headerTop">
-    <div class="row">
-      <div class="col-12">
-
-        <ul class="list-group list-group-horizontal list-unstyled float-right">
-          <li><a class="text-light pr-1" href="#">Angular - </a></li>
-          <li><a class="text-light pr-1" href="#">React - </a></li>
-          <li><a class="text-light" href="#">VueJs</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-      <img width="250px" src="assets/images/michaelKoderLogo.svg" alt="logo">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand ml-5 mr-5 " routerLink="/home">
+      <img width="250px" src="assets/images/michaelKoderLogo_white.svg" alt="logo">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse ml-5" id="navbarNavAltMarkup">
-       
         <ul class="navbar-nav">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" [routerLinkActive]="['active']" routerLink="/home">ACCUEIL <span
                 class="sr-only">(current)</span></a>
           </li>
@@ -46,8 +31,4 @@
         </ul>
     </div>
   </nav>
-
-
-
-
 </header>
