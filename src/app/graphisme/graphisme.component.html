@@ -16,7 +16,7 @@
                 <div  class="text-center" >( slider bootstrap 4)</div>
                 <div id="graphismeCarrousel2" class="carousel slide vh-50 koderSlider" data-ride="carousel">
                     <div class="carousel-inner">
-                        <div *ngFor="let slide of sliders[1].slides;let i=index" [ngClass]="{'active' :i==0}"
+                        <div *ngFor="let slide of graphisme ;let i=index" [ngClass]="{'active' :i==0}"
                             class="carousel-item ">
                             {{i==0 ? 'PREMIERE IMAGE' : 'AUTRES IMAGES'}}
                             <img src="assets/images/graphisme/{{slide.url}}" class="d-block m-auto" alt="...">
@@ -42,7 +42,7 @@
                 <div  class="text-center" >( slider bootstrap 4)</div>
                 <div id="graphismeCarrousel" class="carousel slide vh-50 koderSlider" data-ride="carousel">
                     <div class="carousel-inner">
-                        <div *ngFor="let slide of sliders[0].slides;let i=index" [ngClass]="{'active' :i==0}"
+                        <div *ngFor="let slide of logos ;let i=index" [ngClass]="{'active' :i==0}"
                             class="carousel-item ">
                             {{i==0 ? 'PREMIERE IMAGE' : 'AUTRES IMAGES'}}
                             <img src="assets/images/graphisme/{{slide.url}}" class="d-block m-auto" alt="...">
