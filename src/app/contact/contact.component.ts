@@ -11,7 +11,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ContactComponent implements OnInit {
 
-  url: string = 'http://digikoder.com/contact';
   message: IMessage;
 
   ngOnInit(): void {

@@ -19,7 +19,7 @@
                         <div *ngFor="let slide of graphisme ;let i=index" [ngClass]="{'active' :i==0}"
                             class="carousel-item ">
                             {{i==0 ? 'PREMIERE IMAGE' : 'AUTRES IMAGES'}}
-                            <img src="assets/images/graphisme/{{slide.url}}" class="d-block m-auto" alt="...">
+                            <img src="./assets/images/graphisme/{{slide.url}}" class="d-block m-auto" alt="...">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#graphismeCarrousel2" role="button" data-slide="prev">
@@ -45,7 +45,7 @@
                         <div *ngFor="let slide of logos ;let i=index" [ngClass]="{'active' :i==0}"
                             class="carousel-item ">
                             {{i==0 ? 'PREMIERE IMAGE' : 'AUTRES IMAGES'}}
-                            <img src="assets/images/graphisme/{{slide.url}}" class="d-block m-auto" alt="...">
+                            <img src="./assets/images/graphisme/{{slide.url}}" class="d-block m-auto" alt="...">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#graphismeCarrousel" role="button" data-slide="prev">

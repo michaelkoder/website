@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { HttpClient } from "@angular/common/http";
 
 @Component({
@@ -8,7 +7,6 @@ import { HttpClient } from "@angular/common/http";
   styleUrls: ['./graphisme.component.scss']
 })
 export class GraphismeComponent implements OnInit {
-  faCoffee = faCoffee;
 
   constructor(private httpClient: HttpClient){}
 

@@ -12,8 +12,8 @@ export interface IMessage {
   name: string;
   firstName: string;
   phone: string;
-  email: string;
   title: string;
+  email: string;
   message: string;
 }
 
@@ -27,7 +27,7 @@ const httpOptions = {
 
 @Injectable()
 export class AppService {
-  private emailUrl = 'https://digikoder.com/email.php';
+  private emailUrl = 'https://michaelkoder.com/contact.php';
 
   constructor(private http: HttpClient) {
 

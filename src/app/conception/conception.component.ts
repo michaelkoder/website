@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
 
 @Component({
   selector: 'app-conception',
@@ -7,37 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConceptionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient){}
+
+  sliders:any;
+  conceptionSliderPos:number=0;
+  nbrSlides:number=0;
 
   ngOnInit(): void {
-  }
-
-  sliders:Object=[
-    {id:'conception',title:'Conception',slides:[
-      {id:0,title:'Dominos musique',url:'Conception/MediawaysBO_0.jpg'},
-      {id:0,title:'Dominos musique',url:'Conception/MediawaysBO_1.jpg'},
-      {id:0,title:'Dominos musique',url:'Conception/MediawaysBO_2.jpg'},
-      {id:0,title:'Dominos musique',url:'Conception/MediawaysBO_3.jpg'},
-      {id:0,title:'Dominos musique',url:'Conception/MediawaysBO_4.jpg'},
-      {id:0,title:'Dominos musique',url:'Conception/MediawaysBO_5.jpg'},
-      {id:0,title:'Dominos musique',url:'Conception/MediawaysBO_6.jpg'},
-      {id:0,title:'Dominos musique',url:'Conception/MediawaysBO_7.jpg'},
-      {id:0,title:'Dominos musique',url:'Conception/conception1.png'},
-      {id:1,title:'Dominos musique',url:'Conception/conception2.png'},
-      {id:2,title:'Dominos musique',url:'Conception/conception3.png'}
-    ]}
-  ];
-  conceptionSliderPos:number=0;
-
-  prevSlide(taille){
+    this.httpClient.get("assets/data/conception.json").subscribe(data =>{
+      console.table(data)
+      this.sliders = data['slides'];
+      this.nbrSlides=this.sliders.length
+    });
+  };
+  prevSlide(){
     this.conceptionSliderPos--;
     if(this.conceptionSliderPos<0){
-      this.conceptionSliderPos=(taille-1);
+      this.conceptionSliderPos=(this.nbrSlides-1);
     }
   }
-  nextSlide(taille){
+  nextSlide(){
     this.conceptionSliderPos++;
-    if(this.conceptionSliderPos>taille-1){
+    if(this.conceptionSliderPos>this.nbrSlides-1){
       this.conceptionSliderPos=0;
     }
     
