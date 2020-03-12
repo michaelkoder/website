@@ -108,12 +108,16 @@
             <div class="row m-4">
                 <div class="col-12 col-md-4"></div>
                 <div class="col-12 col-md-4 text-center">
-                    <button type="submit" [disabled]="angForm.pristine || angForm.invalid" class="btn btn-success">
+                    <button type="submit" [disabled]="angForm.pristine || angForm.invalid || sendMessageStatus=='success'" class="btn btn-success">
                         Envoyer
                     </button>
+                    <div *ngIf="sendMessageStatus=='success'" class="alert-success text-center mt-4 mb-4">
+                        Votre message à bien été envoyé
+                    </div>
                 </div>
                 <div class="col-12 col-md-4"></div>
             </div>
         </form>
+
     </div>
 </main>

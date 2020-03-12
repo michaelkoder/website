@@ -1,21 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import { AppService } from '../connection.service';
 
 @Component({
   selector: 'app-graphisme',
   templateUrl: './graphisme.component.html',
-  styleUrls: ['./graphisme.component.scss']
+  styleUrls: ['./graphisme.component.scss'],
+  providers: [AppService]
 })
 export class GraphismeComponent implements OnInit {
 
-  constructor(private httpClient: HttpClient){}
+  constructor(private appService: AppService){}
 
   sliders:any;
   graphisme:any;
   logos:any;
   
   ngOnInit(): void {
-    this.httpClient.get("assets/data/graphisme.json").subscribe(data =>{
+    this.appService.getJson("assets/data/graphisme.json").subscribe(data =>{
       this.graphisme = data[1].slides;
       this.logos = data[0].slides;
     })

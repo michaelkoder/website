@@ -1,21 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import { AppService } from '../connection.service';
 
 @Component({
   selector: 'app-conception',
   templateUrl: './conception.component.html',
-  styleUrls: ['./conception.component.scss']
+  styleUrls: ['./conception.component.scss'],
+  providers: [AppService]
 })
 export class ConceptionComponent implements OnInit {
 
-  constructor(private httpClient: HttpClient){}
+  constructor(private AppService: AppService){}
 
   sliders:any;
   conceptionSliderPos:number=0;
   nbrSlides:number=0;
 
   ngOnInit(): void {
-    this.httpClient.get("assets/data/conception.json").subscribe(data =>{
+    this.AppService.getJson("assets/data/conception.json").subscribe(data =>{
       console.table(data)
       this.sliders = data['slides'];
       this.nbrSlides=this.sliders.length

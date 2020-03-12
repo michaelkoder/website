@@ -18,6 +18,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MyModalComponent } from './my-modal/my-modal.component';
 import { CommonModule, APP_BASE_HREF, LocationStrategy, HashLocationStrategy} from '@angular/common';
+import { MentionsLegalesComponent } from './mentions-legales/mentions-legales.component';
+import { PolitiqueConfidentialiteComponent } from './politique-confidentialite/politique-confidentialite.component';
+import { ConditionsGeneralesDeVentesComponent } from './conditions-generales-de-ventes/conditions-generales-de-ventes.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { CommonModule, APP_BASE_HREF, LocationStrategy, HashLocationStrategy} fr
     ConceptionComponent,
     GraphismeComponent,
     ContactComponent,
-    MyModalComponent
+    MyModalComponent,
+    MentionsLegalesComponent,
+    PolitiqueConfidentialiteComponent,
+    ConditionsGeneralesDeVentesComponent
   ],
   imports: [
     BrowserModule,

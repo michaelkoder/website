@@ -3,8 +3,18 @@
     <div class="col-2"></div>
     <div class="col-8 d-flex">
       <ul class="list-inline mx-auto justify-content-center mt-3">
-        <li class="list-inline-item"><a>Politique de confidentialité - </a></li>
-        <li class="list-inline-item"><a>Mentions légales</a></li>
+        <li class="list-inline-item">
+          <a class="nav-link" [routerLinkActive]="['active']" routerLink="/politique-confidentialite">
+            Politique de confidentialité</a>
+        </li>
+        <li class="list-inline-item">
+          <a class="nav-link" [routerLinkActive]="['active']" routerLink="/mentions-legales">
+            Mentions légales</a>
+          </li>
+          <li class="list-inline-item">
+            <a class="nav-link" [routerLinkActive]="['active']" routerLink="/conditions-generales-de-vente">
+              Conditions générales de vente</a>
+            </li>
       </ul>
     </div>
     <div class="col-2"></div>

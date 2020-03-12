@@ -1,7 +1,16 @@
 import { Component, OnInit} from '@angular/core';
 import { AppService,IMessage } from '../connection.service';
 import { FormGroup, FormControl,  FormBuilder,  Validators } from '@angular/forms';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient,HttpHeaders  } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+
+ const optionRequete = {
+  headers: new HttpHeaders({ 
+    'Access-Control-Allow-Origin':'*',
+    'mon-entete-personnalise':'maValeur'
+  })
+};
 
 @Component({
   selector: 'app-contact',
@@ -12,20 +21,22 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class ContactComponent implements OnInit {
 
   message: IMessage;
-
+  sendMessageStatus='';
   ngOnInit(): void {
-
+    this.sendMessageStatus='';
   }
   
-  //https://www.truecodex.com/course/angular-project-training/create-contact-form-and-send-data-on-email-angular
- 
-  envoiMail() {
-    this.message = this.angForm.value;
-    this.appService.sendEmail(this.message).subscribe(res => {
-      console.log('AppComponent Success', res);
-    }, error => {
-      console.log('AppComponent Error', error);
-    });
+
+  
+  createForm() {
+    this.angForm = this.fb.group({
+      name: ['', Validators.required ],
+      firstName: ['', Validators.required ],
+      phone: ['', Validators.required ],
+      email: ['', Validators.required ],
+      titreMessage: ['', Validators.required ],
+      contactMessage: ['', Validators.required ]
+    }); 
   }
 
    angForm: FormGroup;
@@ -34,14 +45,13 @@ export class ContactComponent implements OnInit {
     ) {
     this.createForm();
   }
-  createForm() {
-   this.angForm = this.fb.group({
-     name: ['', Validators.required ],
-     firstName: ['', Validators.required ],
-     phone: ['', Validators.required ],
-     email: ['', Validators.required ],
-     titreMessage: ['', Validators.required ],
-     contactMessage: ['', Validators.required ]
-   }); 
- }
+
+  envoiMail(){
+    this.appService.sendEmail(this.angForm.value).subscribe(data =>{
+      
+      console.log('RETOUR > '+data);
+      this.sendMessageStatus = data;
+    })
+
+  }
 }

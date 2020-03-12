@@ -12,48 +12,23 @@ export interface IMessage {
   name: string;
   firstName: string;
   phone: string;
-  title: string;
   email: string;
+  title: string;
   message: string;
 }
 
 
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type':  'application/json',
-    'Authorization': 'my-auth-token'
-  })
-};
-
 @Injectable()
 export class AppService {
   private emailUrl = 'https://michaelkoder.com/contact.php';
-
-  constructor(private http: HttpClient) {
-
-  }
-
+  constructor(private http: HttpClient) {}
   sendEmail(message: IMessage): Observable<IMessage> | any {
-    return this.http.post(this.emailUrl, message, httpOptions)
-    .subscribe(response => {
-      console.log('Sending email was successfull', response);
-      return response;
-    })
+    let json = JSON.stringify(message);
+    let params = 'json=' + json;
+    let headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
+    return this.http.post(this.emailUrl, params, { headers: headers })
   }
-
-  /*
-  sendEmail2(message: IMessage): Observable<IMessage> | any {
-    return this.http.post(this.emailUrl, message)
-      .map(response => {
-        console.log('Sending email was successfull', response);
-        return response;
-      })
-      .catch(error => {
-        console.log('Sending email got error', error);
-        return Observable.throw(error);
-      });
+  getJson(url){
+    return this.http.get(url);
   }
-  */
-
-
 }
