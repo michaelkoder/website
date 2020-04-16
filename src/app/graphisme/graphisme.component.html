@@ -18,7 +18,6 @@
                     <div class="carousel-inner">
                         <div *ngFor="let slide of graphisme ;let i=index" [ngClass]="{'active' :i==0}"
                             class="carousel-item ">
-                            {{i==0 ? 'PREMIERE IMAGE' : 'AUTRES IMAGES'}}
                             <img src="./assets/images/graphisme/{{slide.url}}" class="d-block m-auto" alt="...">
                         </div>
                     </div>
@@ -44,7 +43,6 @@
                     <div class="carousel-inner">
                         <div *ngFor="let slide of logos ;let i=index" [ngClass]="{'active' :i==0}"
                             class="carousel-item ">
-                            {{i==0 ? 'PREMIERE IMAGE' : 'AUTRES IMAGES'}}
                             <img src="./assets/images/graphisme/{{slide.url}}" class="d-block m-auto" alt="...">
                         </div>
                     </div>

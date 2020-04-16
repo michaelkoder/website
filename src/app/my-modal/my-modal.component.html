@@ -10,14 +10,13 @@
         </button>
       </div>
       <div *ngIf="content=='moncv'">
-
         <ngx-extended-pdf-viewer [src]="'assets/images/CLAUDE_MICHAEL_CV_2020_6.pdf'" useBrowserLocale="true" height="110vh" width="100%"></ngx-extended-pdf-viewer>
-       
       </div>
       <div *ngIf="content!='moncv'" class="ml-4 mr-4 mb-5">
-          <img width="90%" src="assets/images/projects/{{imgSrc}}"/> 
-          {{content}}
-          <br>
+          <img width="100%" src="assets/images/projects/{{imgSrc}}"/> 
+          <div class="text-center mb-3">
+            {{content}}
+          </div>
           <div class="text-center mt-4 mb-n3">
             <a href="{{popinLink}}" class="btn btn-success">OUVRIR LE PROJET</a>
           </div>

@@ -1,1 +1,24 @@
-/* No CSS *//*# sourceMappingURL=page-not-found.component.css.map */
+html {
+  background-color: black;
+}
+
+svg {
+  margin: 0 auto;
+  display: block;
+  margin-top: 50px;
+}
+
+polygon {
+  -webkit-transform: rotateY(-180deg) scale(0);
+          transform: rotateY(-180deg) scale(0);
+  -webkit-transition: all 0.4s cubic-bezier(0.59, 0.72, 0.375, 1.65);
+  transition: all 0.4s cubic-bezier(0.59, 0.72, 0.375, 1.65);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+polygon.processed {
+  -webkit-transform: rotateY(0deg) scale(1);
+          transform: rotateY(0deg) scale(1);
+}
+/*# sourceMappingURL=page-not-found.component.css.map */

@@ -3,23 +3,19 @@ header {
           box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 }
 
-header .navbar-nav .active > .nav-link a,
-header .navbar-nav .nav-item a {
-  margin: 10px 1.4rem 0;
+header nav {
+  background-color: #000000;
 }
 
-header .navbar-nav .active > .nav-link a.active,
-header .navbar-nav .nav-item a.active {
-  text-decoration: underline;
+header nav .navbar-nav .active > .nav-link a,
+header nav .navbar-nav .nav-item a {
+  margin: 10px 1.4rem 0;
   color: #ffffff;
 }
 
-header nav {
-  background: #000000;
-}
-
-header nav a:hover,
-header nav a {
+header nav .navbar-nav .active > .nav-link a.active,
+header nav .navbar-nav .nav-item a.active {
+  text-decoration: underline;
   color: #ffffff;
 }
 /*# sourceMappingURL=header.component.css.map */

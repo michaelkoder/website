@@ -1,22 +1,19 @@
 header{
     box-shadow: 0 3px 6px 0 rgba(0,0,0,.16);
-    .navbar-nav {
-        .active > .nav-link,
-        .nav-item {
-            a{
-                margin:10px 1.4rem 0;
-            &.active{
-                text-decoration: underline;
-                color:#ffffff;
-            } 
-            } 
-        }
-    }
     nav{
-        background:#000000;
-        a:hover,
-        a{
-            color:#ffffff;
+        background-color: #000000;
+        .navbar-nav {
+            .active > .nav-link,
+            .nav-item {
+                a{
+                    margin:10px 1.4rem 0;
+                    color:#ffffff;
+                &.active{
+                    text-decoration: underline;
+                    color:#ffffff;
+                } 
+                } 
+            }
         }
     }
 } 
