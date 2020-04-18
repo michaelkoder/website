@@ -1,12 +1,12 @@
 <main>
-    <h1 class="text-center mt-5 mb-5"> FORMULAIRE DE CONTACT </h1>
+    <h1 class="text-center mt-5 mb-5">{{'ContactTitle' | translate}}</h1>
     <div style="text-align:center">
         <form id="contactForm" [formGroup]="angForm" (ngSubmit)="envoiMail()" class="container mt-4">
             <div class="row m-4">
                 <div class="col-12 col-md-2"></div>
                 <div class="col-12 col-md-3 text-right">
                     <label>
-                        Nom :
+                        {{'ContactForm.name' | translate}} :
                     </label></div>
                 <div class="col-12 col-md-4">
                     <input type="text" id="name" name="name" class="form-control" required minlength="4"
@@ -14,7 +14,7 @@
                     <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)"
                         class="alert alert-danger">
                         <div *ngIf="angForm.controls['name'].errors.required">
-                            Votre nom est requis
+                            {{'ContactForm.nameRequired' | translate}}                  
                         </div>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
                 <div class="col-12 col-md-2"></div>
                 <div class="col-12 col-md-3 text-right">
                     <label>
-                       Prénom :
+                        {{'ContactForm.firstname' | translate}} :
                     </label></div>
                 <div class="col-12 col-md-4">
                     <input type="text" id="firstName" name="firstName" class="form-control" required minlength="4"
@@ -32,7 +32,7 @@
                     <div *ngIf="angForm.controls['firstName'].invalid && (angForm.controls['firstName'].dirty || angForm.controls['firstName'].touched)"
                         class="alert alert-danger">
                         <div *ngIf="angForm.controls['firstName'].errors.required">
-                           Votré prénom est requis
+                            {{'ContactForm.firstnameRequired' | translate}}
                         </div>
                     </div>
                 </div>
@@ -40,14 +40,14 @@
             </div><div class="row m-4">
                 <div class="col-12 col-md-2"></div>
                 <div class="col-12 col-md-3 text-right"><label>
-                        Téléphone :
-                    </label></div>
+                    {{'ContactForm.phone' | translate}} :
+                </label></div>
                 <div class="col-12 col-md-4">
                     <input type="phone" id="phone" name="phone" class="form-control" required formControlName="phone" />
                     <div *ngIf="angForm.controls['phone'].invalid && (angForm.controls['phone'].dirty || angForm.controls['phone'].touched)"
                         class="alert alert-danger">
                         <div *ngIf="angForm.controls['phone'].errors.required">
-                            Le téléphone est requis.
+                            {{'ContactForm.phoneRequired' | translate}}
                         </div>
                     </div>
                 </div>
@@ -56,14 +56,14 @@
             <div class="row m-4">
                 <div class="col-12 col-md-2"></div>
                 <div class="col-12 col-md-3 text-right"><label>
-                        Email :
-                    </label></div>
+                    {{'ContactForm.email' | translate}} :
+                </label></div>
                 <div class="col-12 col-md-4">
                     <input type="email" id="email" name="email" class="form-control" required formControlName="email" />
                     <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['email'].dirty || angForm.controls['email'].touched)"
                         class="alert alert-danger">
                         <div *ngIf="angForm.controls['email'].errors.required">
-                            L'Email est requis.
+                            {{'ContactForm.emailRequired' | translate}}
                         </div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                 <div class="col-12 col-md-2"></div>
                 <div class="col-12 col-md-3 text-right">
                     <label>
-                        Titre du message :
+                        {{'ContactForm.title' | translate}} :
                     </label>
                 </div>
                 <div class="col-12 col-md-4">
@@ -82,7 +82,7 @@
                     <div *ngIf="angForm.controls['titreMessage'].invalid && (angForm.controls['titreMessage'].dirty || angForm.controls['titreMessage'].touched)"
                         class="alert alert-danger">
                         <div *ngIf="angForm.controls['titreMessage'].errors.required">
-                            Titre de message est requis.
+                            {{'ContactForm.titleMessageRequired' | translate}}
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                     <div *ngIf="angForm.controls['contactMessage'].invalid && (angForm.controls['contactMessage'].dirty || angForm.controls['contactMessage'].touched)"
                         class="alert alert-danger">
                         <div *ngIf="angForm.controls['contactMessage'].errors.required">
-                           Le message est requis.
+                            {{'ContactForm.messageRequired' | translate}}
                         </div>
                     </div>
                 </div>
@@ -109,10 +109,10 @@
                 <div class="col-12 col-md-4"></div>
                 <div class="col-12 col-md-4 text-center">
                     <button type="submit" [disabled]="angForm.pristine || angForm.invalid || sendMessageStatus=='success'" class="btn btn-success">
-                        Envoyer
+                        {{'ContactForm.button' | translate}}
                     </button>
                     <div *ngIf="sendMessageStatus=='success'" class="alert-success text-center mt-4 mb-4">
-                        Votre message à bien été envoyé
+                        {{'ContactForm.validationSend' | translate}} 
                     </div>
                 </div>
                 <div class="col-12 col-md-4"></div>

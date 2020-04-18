@@ -4,7 +4,7 @@
         <div class="row mt-4 mb-5">
             <div class="col-1"></div>
             <div class="col-10 text-center">
-                <h1>Quelques travaux de conception</h1>
+                <h1>{{'ConceptionTitle' | translate }}</h1>
             </div>
             <div class="col-1"></div>
         </div>
@@ -21,7 +21,7 @@
                     <div class="col-12 col-md-10 m-auto text-center">
                         <h4 class="text-center">Conception</h4>
                         <div class="text-center mb-3">
-                            ( slider codé à la main ) {{conceptionSliderPos+1}} / {{nbrSlides}}</div>
+                            ( {{'ConceptionTitle' | translate }} ) {{conceptionSliderPos+1}} / {{nbrSlides}}</div>
                         <div class="customSliderBox m-auto" *ngFor="let slide of sliders;let i=index">
                             <img class="w-100" src="./assets/images/graphisme/{{slide.url}}"
                                 [ngClass]="{'active' : conceptionSliderPos==i}">

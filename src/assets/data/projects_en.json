@@ -1,0 +1,20 @@
+ {"projectsList":[ 
+        {"id":"perso","title":"Personnal projects","projects":[
+            {"id":0,"cat":"perso","name":"DIGIKODER.COM","logo":"digikoder.jpg", "description":"An online site sales platform based on the Wordpress CMS with multiple optimizations / customizations","url":"https://digikoder.com"},
+            {"id":1,"cat":"perso","name":"VENDRENLIGNE.COM","logo":"vendrenligne.jpg","description":"A free online store service for professionals and individuals that I conceptualized, designed, fully realized. Currently in pre-launch phase","url":"https://vendrenligne.com/"}
+        ]},
+        {"id":"wp","title":"Wordpress Projects","projects":[
+            {"id":0,"cat":"wp","name":"LA SERVIETTE PARIS","logo":"laserviette.jpg", "description":"A luxury towels online sales site to which I have added evolutions and optimizations including a personalization module to add personalized embroidery on the towels","url":"https://shop.laservietteparis.com/"},
+            {"id":1,"cat":"wp","name":"LAUREFERLICOT.FR","logo":"laureferlicot.jpg", "description":"Portfolio of a web designer created with wordpress + code for the home page from PSD models","url":"https://laureferlicot.fr/"},
+            {"id":2,"cat":"wp","name":"ACFA-PREMIUM","logo":"acfpremium.jpg", "description":"The site and redesign of an html site to wordpress + speed, security, responsive design optimizations","url":"https://www.acfa-premium.com/"},
+            {"id":3,"cat":"wp","name":"CONTENT FACTORY","logo":"contentfactory.jpg", "description":"Portfolio of photographer Luc TEBOUL.","url":"https://lacontentfactory.com/"},
+            {"id":4,"cat":"wp","name":"DEMO SHOP","logo":"demoshop.jpg", "description":"Demonstration of online sales site with tools: wordpress and woocommerce.","url":"https://digikoder.com/demoShop/"},
+            {"id":5,"cat":"wp","name":"LA BOUSSOLE URBAINE","logo":"labousolle.jpg", "description":"Creation of the website of the association La boussole urbain which helps homeless people.","url":"https://www.laboussoleurbaine.com/"},
+            {"id":6,"cat":"wp","name":"PHOENIX CREATION","logo":"phoenix.jpg", "description":"Online store of a friend who created jewelry and juggling gear.","url":"https://www.phoenixcrea.com/"},
+            {"id":7,"cat":"wp","name":"PRO-D PREMIUM","logo":"prodpremium.jpg", "description":"Company specializing in compliance assistance for the protection of personal data - RGPD","url":"https://pro-dpremium.com/"}
+        ]},
+        {"id":"code","title":"Other Projects","projects":[
+            {"id":0,"cat":"code","name":"MEDIAWAYS","logo":"mediaways.jpg", "description":"Creation of a rich media web solution for text / image / video synchronization and a complex web application for project generation automation.","url":"https://digikoder.com/CONTENUS/users/mediaways/"}
+        ]}
+    ]
+}

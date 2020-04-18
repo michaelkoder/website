@@ -139,8 +139,8 @@
 
 
         <div class="row mt-5 ">
-          <div class="col-12 col-md-7 d-inline-flex " [innerHTML]="'Mobility' | translate"></div>
-          <div class="col-12 col-md-5 d-inline-flex">
+          <div class="col-12 col-md-6 d-inline-flex " [innerHTML]="'Mobility' | translate"></div>
+          <div class="col-12 col-md-6 d-inline-flex">
             <b>
               <h4>{{'Availability' | translate}} </h4>
             </b>&nbsp;
@@ -155,20 +155,15 @@
         </div>
 
         <div class="row mt-4 ">
-          <div class="col-12 col-md-3 text-left ">
-            <b>
-              <h4 class="pr-3">{{'Prices' | translate }} </h4>
-            </b>
-          </div>
-          <div class="col-12 col-md-4 d-inline-flex text-left">
-            <div class="mr-4">
-              <b>{{'FreelancePrice' | translate }} <span class="mr-1">:</span> </b>
-              <br>{{'ParisRegionPrices' | translate }} <br>
+          <div class="col-12 col-md-6 d-inline-flex text-left">
+            <div>
+              <b class="d-flex" [innerHTML]="'FreelancePrice' | translate "> <span class="mr-1">:</span> </b>
+              {{'ParisRegionPrices' | translate }} <br>
               {{'NoParisRegionPrices' | translate }} <br>
             </div>
           </div>
-          <div class="col-12 col-md-4 d-inline-flex text-left">
-            <div class="ml-5" [innerHTML]="'ContractPrices' | translate"></div>
+          <div class="col-12 col-md-6 d-inline-flex text-left">
+            <div [innerHTML]="'ContractPrices' | translate"></div>
 
           </div>
         </div>

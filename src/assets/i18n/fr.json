@@ -7,6 +7,11 @@
         "graphism":"GRAPHISME",
         "contact":"CONTACT"
     },
+    "footer":{
+        "politic":"Politique de confidentialité",
+        "legal":"Mentions légales",
+        "conditions":"Conditions générales de vente"
+    },
     "Sitetitle": "Développeur Intégrateur web front",
     "experience": "10 ans d’experience",
     "Presentation":"Développeur intégrateur web depuis 10 ans en CDI et en freelance dans des entreprises parisiennes.<br/> Je travail sur tous types de projets web, applications web, sites internet, applications mobiles.<br/> J'ai travaillé plusieurs fois sur des problématiques de conception UI/UX, de la conduite de projet. <br> J'ai également réalisé plusieurs projets à l'aide des outils wordpress et woocommerce pour réaliser tous types de sites web pour des particuliers ou des entreprises.",
@@ -19,10 +24,9 @@
         "title":"PROJET PROFESSIONNEL",
         "description":"<h4>Recherche :</h4> Mission freelance ou CDI dans le développement ou l'intégration web front. <br>Travailler en équipe et monter en compétence sur les nouvelles technologies front comme Angular, ReactJS, Javascript ES6, VueJs par exemple.<br> J'ai également également intervenir sur de la conception UI/UX, de la conduite de projets, montage vidéo ou graphiques photoshop et sur les outils wordpress/woocommerce si necessaire."
         },
-    "Mobility":"<b> <h4>Mobilité : </h4> </b>&nbsp;<p class=\"pt-1\">Ile de France / France.</p>",
+    "Mobility":"<b> <h4>Mobilité : </h4> </b>&nbsp;<p class=\"pt-1\">Monde entier</p>",
     "Availability":"Disponibilitée :",
-    "Prices":"Tarifs :",
-    "FreelancePrice":"JTM Freelance ",
+    "FreelancePrice":"<span><h4>Tarifs : </h4> </span>&nbsp;<span class=\"pt-1\">JTM Freelance</span> ",
     "ParisRegionPrices":"Ile de France : 400-500 €. ",
     "NoParisRegionPrices":"Hors ile de France : 350-450 €. ",
     "ContractPrices":"<b>CDI (télétravail de préférence) <span class=\"mr-1 ml-1\">:</span></b><br> 50K et +",
@@ -33,6 +37,28 @@
         "2":"Je remercie pleinement Michael qui a été professionnel du début à la fin lors de notre session de travail. Je recommande les yeux fermés !",
         "3":"Michael est LE developpeur pour tous vos projets Web ! Je le conseille vivement !"
         },
-    "FacebookLink":"Voir les autres témoignages >>"
+    "FacebookLink":"Voir les autres témoignages >>",
+    "ProjectTitle":"PROJETS",
+    "ProjectSubTitle":"Voici quelques projets réalisés ces dernières années regroupés par types ",
+    "ConceptionTitle":"Quelques travaux de conception",
+    "ConceptionSliderNote":"slider codé à la main",
+    "GraphismTitle":"Quelques travaux de graphisme",
+    "GraphismTitle2":"GRAPHISME",
+    "ContactTitle":"FORMULAIRE DE CONTACT",
+    "ContactForm":{
+        "name":"Nom",
+        "firstname":"Prénom",
+        "phone":"Téléphone",
+        "email":"Email",
+        "title":"Titre du message",
+        "button":"Envoyer",
+        "nameRequired":"Votre nom est requis",
+        "firstnameRequired":"Votre prénom est requis",
+        "phoneRequired":"Le téléphone est requis.",
+        "emailRequired":"L'Email est requis.",
+        "titleMessageRequired":"Titre de message est requis.",
+        "messageRequired":"Le message est requis.",
+        "validationSend":"Votre message à bien été envoyé."
+    }
 
 }

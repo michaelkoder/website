@@ -7,6 +7,11 @@
         "graphism":"GRAPHISM",
         "contact":"CONTACT"
     },
+    "footer":{
+        "politic":"Privacy policy",
+        "legal":"Legal Notice",
+        "conditions":"Terms of Sales"
+    },
     "Sitetitle": "Web front developer/integrator",
     "experience": "10 years of experience",
     "Presentation":"Web integrator developer for 10 years in CDI and freelance in Parisian companies. <br/> I work on all types of web projects, web applications, websites, mobile applications. <br/> I have worked several times on UI / UX design issues, project management. <br> I also carried out several projects using wordpress and woocommerce tools to create all types of websites for individuals or companies.",
@@ -16,13 +21,12 @@
     "AngularVersion":"This website has been coded <br/> with Angular 9",
     "Professionnal":
         {
-        "title":"PROJET PROFESSIONNEL",
+        "title":"PROFESSIONNAL PROJECT",
         "description":"<h4>Research :</h4> Freelance mission in front web development or integration. <br> Work in a team and develop skills on new front technologies such as Angular, ReactJS, Javascript ES6, VueJs for example.<br> I also also intervene on UI / UX design, project management, video editing or photoshop graphics and on wordpress / woocommerce tools if necessary."
         },
-    "Mobility":"<b> <h4>Mobility : </h4> </b>&nbsp;<p class=\"pt-1\">France.</p>",
+    "Mobility":"<b> <h4>Mobility : </h4> </b>&nbsp;<p class=\"pt-1\">World.</p>",
     "Availability":"Availability :",
-    "Prices":"Prices :",
-    "FreelancePrice":"Freelance price",
+    "FreelancePrice":"<span><h4>Prices : </h4> </span>&nbsp;<span class=\"pt-1\">Freelance</span> ",
     "ParisRegionPrices":"Paris region prices : 400-500 €. ",
     "NoParisRegionPrices":"Out of Paris region prices : 350-450 €. ",
     "ContractPrices":"<b>Perm Contract (preferably remote)<span class=\"mr-1 ml-1\">:</span></b><br> 50K and +",
@@ -33,7 +37,29 @@
         "2":"I fully thank Michael who was professional from start to finish during our work session. I recommend eyes closed!",
         "3":"Michael is THE developer for all your web projects! I highly recommend it!"
         },
-    "FacebookLink":"See the other reviews >>"
+    "FacebookLink":"See the other reviews >>",
+    "ProjectTitle":"PROJECTS",
+    "ProjectSubTitle":"Here are some projects carried out in recent years grouped by types",
+    "ConceptionTitle":"Some design work",
+    "ConceptionSliderNote":"hand coded slider",
+    "GraphismTitle":"Some graphic design work",
+    "GraphismTitle2":"GRAPHISM",
+    "ContactTitle":"CONTACT FORM",
+    "ContactForm":{
+        "name":"Name",
+        "firstname":"Firstname",
+        "phone":"Phone",
+        "email":"Email",
+        "title":"Title",
+        "button":"Send",
+        "nameRequired":"Your name is required",
+        "firstnameRequired":"Your firstname is required",
+        "phoneRequired":"Your phone is required",
+        "emailRequired":"Your email is required",
+        "titleMessageRequired":"The title is required",
+        "messageRequired":"Your message is required",
+        "validationSend":"Your message has been sent"
+    }
 
 
 }

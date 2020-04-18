@@ -5,16 +5,19 @@
       <ul class="list-inline mx-auto justify-content-center mt-3">
         <li class="list-inline-item">
           <a class="nav-link" [routerLinkActive]="['active']" routerLink="/politique-confidentialite">
-            Politique de confidentialité</a>
+            {{'footer.politic' | translate}}
+          </a>
         </li>
         <li class="list-inline-item">
           <a class="nav-link" [routerLinkActive]="['active']" routerLink="/mentions-legales">
-            Mentions légales</a>
-          </li>
-          <li class="list-inline-item">
-            <a class="nav-link" [routerLinkActive]="['active']" routerLink="/conditions-generales-de-vente">
-              Conditions générales de vente</a>
-            </li>
+            {{'footer.legal' | translate}}
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="nav-link" [routerLinkActive]="['active']" routerLink="/conditions-generales-de-vente">
+            {{'footer.conditions' | translate}}
+          </a>
+        </li>
       </ul>
     </div>
     <div class="col-2"></div>
