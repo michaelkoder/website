@@ -6,9 +6,9 @@
       </div>
       <div class="col-12 col-md-10 pt-4 text-center">
         <h1>
-          Développeur Intégrateur web front
+          {{'Sitetitle' | translate }}
         </h1>
-        <h5>(10 ans d’experience)</h5>
+        <h5>({{'experience' | translate }})</h5>
       </div>
       <div class="col-1">
       </div>
@@ -60,16 +60,11 @@
     <div class="row mb-3">
       <div class="col-2"></div>
       <div class="col-12 col-md-8 pt-3 text-center">
-        Développeur intégrateur web depuis 10 ans en CDI et en freelance dans des entreprises parisiennes.<br> Je
-        travail
-        sur tous types de projets web, applications web, sites internet, applications mobiles.<br> J'ai travaillé
-        plusieurs
-        fois sur des problématiques de conception UI/UX, de la conduite de projet. <br> J'ai également réalisé plusieurs
-        projets à l'aide des outils wordpress et woocommerce pour réaliser tous types de sites web pour des particuliers
-        ou des entreprises.
+      <p [innerHTML]="'Presentation' | translate"></p>
+
         <div class="mt-5 mb-4">
           <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bd-example-modal-lg">
-            CONSULTER MON CV
+            {{'CvButton' | translate }}
           </button>
         </div>
       </div>
@@ -102,9 +97,7 @@
       <div class="col-12 col-md-2"></div>
       <div class="col-12 col-md-8 text-center">
         <div class="mb-2"> <img src="./assets/images/icons/icons8-angularjs.svg" width="100px"></div>
-        <h5>
-          Ce site internet à été développé <br>avec Angular version 8 
-        </h5>
+        <h5 [innerHTML]="'AngularVersion' | translate"></h5>
       </div>
       <div class="col-12 col-md-2"></div>
     </div>
@@ -140,28 +133,23 @@
     <div class="row m-5">
       <div class="col-1"></div>
       <div class="col-12 col-md-10">
-        <h2 class="text-center">PROJET PROFESSIONNEL</h2>
+        <h2 class="text-center" [innerHTML]="'Professionnal.title' | translate"></h2>
         <br>
-        <p>
-          <b>
-            <h4>Recherche :</h4>
-          </b> Mission freelance ou CDI dans le développement ou l'intégration web front.
-          <br>Travailler en équipe et monter
-          en compétence sur les nouvelles technologies front comme Angular, ReactJS, Javascript ES6, VueJs par
-          exemple.<br> J'ai également également intervenir sur de la conception UI/UX, de la conduite de projets,
-          montage vidéo ou graphiques photoshop et sur les outils wordpress/woocommerce si necessaire.
-        </p>
+        <p [innerHTML]="'Professionnal.description' | translate"></p>
+
 
         <div class="row mt-5 ">
-          <div class="col-12 col-md-6 d-inline-flex ">
+          <div class="col-12 col-md-7 d-inline-flex " [innerHTML]="'Mobility' | translate"></div>
+          <div class="col-12 col-md-5 d-inline-flex">
             <b>
-              <h4>Mobilité : </h4>
-            </b>&nbsp;<p class="pt-1">Ile de France / France.</p>
-          </div>
-          <div class="col-12 col-md-6 d-inline-flex">
-            <b>
-              <h4>Disponibilitée : </h4>
-            </b>&nbsp;<p class="pt-1">{{dispos}}.</p>
+              <h4>{{'Availability' | translate}} </h4>
+            </b>&nbsp;
+            <p *ngIf="currentLang=='fr'" class="pt-1">
+              {{dispos2}}
+            </p>
+            <p *ngIf="currentLang=='en'" class="pt-1">
+              {{dispos2}}
+            </p>
           </div>
 
         </div>
@@ -169,18 +157,19 @@
         <div class="row mt-4 ">
           <div class="col-12 col-md-3 text-left ">
             <b>
-              <h4 class="pr-3">Tarifs : </h4>
+              <h4 class="pr-3">{{'Prices' | translate }} </h4>
             </b>
           </div>
-          <div class="col-12 col-md-9 d-inline-flex text-left">
-            <div>
-              <b>JTM Freelance <span class="mr-1">:</span> </b>
-              Ile de France : 400-500 €.<br>
-              Hors ile de France : 350-450 €.<br>
+          <div class="col-12 col-md-4 d-inline-flex text-left">
+            <div class="mr-4">
+              <b>{{'FreelancePrice' | translate }} <span class="mr-1">:</span> </b>
+              <br>{{'ParisRegionPrices' | translate }} <br>
+              {{'NoParisRegionPrices' | translate }} <br>
             </div>
-            <div class="ml-5">
-              <b>CDI <span class="mr-1 ml-1">:</span></b> 50K et +
-            </div>
+          </div>
+          <div class="col-12 col-md-4 d-inline-flex text-left">
+            <div class="ml-5" [innerHTML]="'ContractPrices' | translate"></div>
+
           </div>
         </div>
 
@@ -193,6 +182,9 @@
   <section class="pb-5">
     <div class="container ">
       <div class="row mt-4 pb-5">
+        <div class="col-12 text-center text-light pt-4 pb-4">
+          <h2> {{'Reviews.Title' | translate}}</h2>
+        </div>
         <div class="col-12 col-md-3 facebook-review-box">
           <div class="mr-1 ml-1 fb-box2 mt-3 w-100">
             <h4>Benjamin Bottard</h4>
@@ -204,8 +196,7 @@
               <i class="fas fa-star"></i>
             </div>
             <div class="fb-avis">
-              Très satisfait du travail de Michael qui a développé notre site avec notamment un module de
-              personnalisation particulièrement complexe !
+              {{'Reviews.1' | translate}}
             </div>
           </div>
         </div>
@@ -220,8 +211,7 @@
               <i class="fas fa-star"></i>
             </div>
             <div class="fb-avis">
-              Je remercie pleinement Michael qui a été professionnel du début à la fin lors de notre session de travail.
-              Je recommande les yeux fermés !
+              {{'Reviews.2' | translate}}
             </div>
           </div>
         </div>
@@ -251,7 +241,7 @@
               <i class="fas fa-star"></i>
             </div>
             <div class="fb-avis">
-              Michael est LE developpeur pour tous vos projets Web ! Je le conseille vivement !
+              {{'Reviews.3' | translate}}
             </div>
           </div>
         </div>
@@ -262,7 +252,7 @@
         </div>
         <div class="col-8 text-center">
           <a href="https://www.facebook.com/pg/digikoder/reviews/?ref=page_internal" target="_blank" class="text-center mb-5 mt-2 whiteTxt">
-            Voir les autres témoignages >>
+            {{'FacebookLink' | translate}}
           </a>
           <br>
           <br>
@@ -279,5 +269,5 @@
 
 
 </main>
-<app-my-modal title="CV Claude Michael Développeur Intégateur web Front" content="moncv" imgSrc="" popinLink="">
+<app-my-modal title="{{'CvTitle' | translate }}" lang="{{currentLang}}" content="moncv" imgSrc="" popinLink="">
 </app-my-modal>

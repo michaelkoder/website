@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule }   from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +21,9 @@ import { CommonModule, APP_BASE_HREF, LocationStrategy, HashLocationStrategy} fr
 import { MentionsLegalesComponent } from './mentions-legales/mentions-legales.component';
 import { PolitiqueConfidentialiteComponent } from './politique-confidentialite/politique-confidentialite.component';
 import { ConditionsGeneralesDeVentesComponent } from './conditions-generales-de-ventes/conditions-generales-de-ventes.component';
+
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,14 @@ import { ConditionsGeneralesDeVentesComponent } from './conditions-generales-de-
     HttpClientModule,FormsModule,
     ReactiveFormsModule,
     NgxExtendedPdfViewerModule,
-    AngularSvgIconModule.forRoot()
+    AngularSvgIconModule.forRoot(),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpTranslateLoader,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },
@@ -53,3 +63,8 @@ import { ConditionsGeneralesDeVentesComponent } from './conditions-generales-de-
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+// AOT compilation support
+export function httpTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
