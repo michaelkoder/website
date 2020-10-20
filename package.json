@@ -40,7 +40,7 @@
     "rxjs": "^6.5.5",
     "rxjs-compat": "^6.5.5",
     "tslib": "^1.10.0",
-    "webpack-subresource-integrity": "^1.4.0",
+    "webpack-subresource-integrity": "^1.5.1",
     "zone.js": "^0.10.3"
   },
   "devDependencies": {
